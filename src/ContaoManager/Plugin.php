@@ -30,7 +30,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(ContaoMobilecontentBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class, CalendarBundle::class, FaqBundle::class, NewsBundle::class, BugBusterMobiledetectionBundle::class]),
+                ->setLoadAfter([ContaoCoreBundle::class, ContaoCalendarBundle::class, ContaoFaqBundle::class, ContaoNewsBundle::class]),
         ];
     }
 }
