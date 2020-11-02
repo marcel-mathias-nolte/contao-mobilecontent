@@ -22,8 +22,8 @@ array_insert($GLOBALS['TL_DCA']['tl_article']['list']['operations'], 6, [
         'haste_ajax_operation' => [
             'field'   => 'hideOnDesktop',
             'options' => [
-                ['value' => '', 'icon' => 'system/modules/mobilecontent/public/desktop-visible.svg'],
-                ['value' => '1', 'icon' => 'system/modules/mobilecontent/public/desktop-invisible.svg'],
+                ['value' => '', 'icon' => 'bundles/contaomobilecontent/desktop-visible.svg'],
+                ['value' => '1', 'icon' => 'bundles/contaomobilecontent/desktop-invisible.svg'],
             ],
         ],
     ],
@@ -33,8 +33,8 @@ array_insert($GLOBALS['TL_DCA']['tl_article']['list']['operations'], 6, [
         'haste_ajax_operation' => [
             'field'   => 'hideOnMobile',
             'options' => [
-                ['value' => '', 'icon' => 'system/modules/mobilecontent/public/mobile-visible.svg'],
-                ['value' => '1', 'icon' => 'system/modules/mobilecontent/public/mobile-invisible.svg'],
+                ['value' => '', 'icon' => 'bundles/contaomobilecontent/mobile-visible.svg'],
+                ['value' => '1', 'icon' => 'bundles/contaomobilecontent/mobile-invisible.svg'],
             ],
         ],
     ],
