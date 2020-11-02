@@ -16,6 +16,9 @@ namespace MarcelMathiasNolte\ContaoMobilecontentBundle\ContaoManager;
 
 use BugBuster\MobiledetectionBundle\BugBusterMobiledetectionBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
+use Contao\NewsBundle\ContaoNewsBundle;
+use Contao\FaqBundle\ContaoFaqBundle;
+use Contao\CalendarBundle\ContaoCalendarBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
@@ -30,7 +33,12 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(ContaoMobilecontentBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class, ContaoCalendarBundle::class, ContaoFaqBundle::class, ContaoNewsBundle::class]),
+                ->setLoadAfter([
+                    ContaoCoreBundle::class,
+                    ContaoCalendarBundle::class,
+                    ContaoFaqBundle::class,
+                    ContaoNewsBundle::class
+                ]),
         ];
     }
 }
