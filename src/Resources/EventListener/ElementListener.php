@@ -44,7 +44,7 @@ class ElementListener
      */
     private function getElementVisibility(Model $element)
     {
-        $isMobile = $GLOBALS['objPage']->isMobile;
+        $isMobile = \MarcelMathiasNolte\ContaoMobilecontentBundle\MobileDetection::isMobile();
 
         // Hide on mobile
         if ($isMobile && $element->hideOnMobile) {

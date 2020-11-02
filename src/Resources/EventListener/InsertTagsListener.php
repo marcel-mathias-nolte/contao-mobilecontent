@@ -37,7 +37,7 @@ class InsertTagsListener
     public function onReplace($tag, $isCache, $value, array $flags, array $tags, array $cache, &$_rit, &$_cnt)
     {
         $chunks   = trimsplit('::', $tag);
-        $isMobile = $GLOBALS['objPage']->isMobile;
+        $isMobile = \MarcelMathiasNolte\ContaoMobilecontentBundle\MobileDetection::isMobile();
 
         switch ($chunks[0]) {
             case 'mobile':

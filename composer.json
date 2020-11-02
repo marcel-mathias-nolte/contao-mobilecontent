@@ -7,17 +7,30 @@
     "authors": [
         {
             "name": "derhaeuptling",
-            "homepage": "https://derhaeuptling.com/"
+            "homepage": "https://derhaeuptling.com/",
+            "role":"Developer"
         },
         {
             "name": "Kamil Kuzminski",
             "email":"kamil.kuzminski@codefog.pl",
             "homepage": "https://codefog.pl",
-            "role": "developer"
+            "role":"Developer"
+        },
+        {
+            "name":"Glen Langer",
+            "homepage":"http://contao.ninja",
+            "role":"Developer"
+        },
+        {
+            "name": "Serban Ghita",
+            "email": "serbanghita@gmail.com",
+            "homepage": "http://mobiledetect.net",
+            "role": "Developer"
         },
         {
             "name": "Marcel Mathias Nolte",
-            "homepage": "https://github.com/marcel-mathias-nolte"
+            "homepage": "https://github.com/marcel-mathias-nolte",
+            "role":"Developer"
         }
     ],
     "require": {
@@ -25,7 +38,7 @@
         "contao/core-bundle":"^4.4",
         "contao-community-alliance/composer-plugin":"~2.4 || ~3.0",
         "codefog/contao-haste":"^4.17",
-        "bugbuster/contao-mobiledetection-bundle": "*"
+        "mobiledetect/mobiledetectlib": "2.*"
     },
     "conflict": {
         "contao/core": "*",

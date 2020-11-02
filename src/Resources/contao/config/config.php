@@ -13,17 +13,9 @@
  */
 
 /**
- * Frontend modules
- */
-$GLOBALS['FE_MOD']['application']['mobile_switch'] = 'MarcelMathiasNolte\ContaoMobilecontentBundle\FrontendModule\MobileSwitchModule';
-
-/**
  * Hooks
  */
-$GLOBALS['TL_HOOKS']['getPageLayout'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\PageListener', 'onGetPageLayout'];
-$GLOBALS['TL_HOOKS']['getRootPageFromUrl'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\PageListener', 'onGetRootPageFromUrl'];
 $GLOBALS['TL_HOOKS']['isVisibleElement'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\ElementListener', 'onIsVisibleElement'];
-$GLOBALS['TL_HOOKS']['initializeSystem'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\PageListener', 'onInitializeSystem'];
 $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\InsertTagsListener', 'onReplace'];
 
 if (!is_array($GLOBALS['TL_HOOKS']['parseTemplate'])) {
@@ -31,3 +23,6 @@ if (!is_array($GLOBALS['TL_HOOKS']['parseTemplate'])) {
 }
 
 array_unshift($GLOBALS['TL_HOOKS']['parseTemplate'], ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\TemplateListener', 'onParse']);
+
+$GLOBALS['TL_HOOKS']['generatePage'][]      = array('BugBuster\MobileDetection\Hooks', 'insertInsertTagMD');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('BugBuster\MobileDetection\Hooks', 'mobiledetectionReplaceInsertTags');

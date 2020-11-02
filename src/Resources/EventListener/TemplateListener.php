@@ -28,7 +28,7 @@ class TemplateListener
      */
     public function onParse(Template $template)
     {
-        if ($template instanceof FrontendTemplate && $GLOBALS['objPage']->isMobile) {
+        if ($template instanceof FrontendTemplate && \MarcelMathiasNolte\ContaoMobilecontentBundle\MobileDetection::isMobile()) {
             // Handle the FAQ page module template
             if (strpos($template->getName(), 'mod_faqpage') === 0) {
                 $this->handleFaqPage($template);
