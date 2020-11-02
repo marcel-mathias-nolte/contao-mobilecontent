@@ -35,7 +35,7 @@ if (isset($GLOBALS['TL_DCA']['tl_calendar_events']['subpalettes']['addImage'])) 
 /**
  * Add fields
  */
-$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImage'] = [
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImage'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImage'],
     'exclude' => true,
     'inputType' => 'checkbox',
@@ -43,7 +43,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mobileImage'] = [
     'sql' => "char(1) NOT NULL default ''",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSrc'] = [
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageSrc'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageSrc'],
     'exclude' => true,
     'inputType' => 'fileTree',
@@ -57,7 +57,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSrc'] = [
     'sql' => "binary(16) NULL",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageCustomSize'] = [
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageCustomSize'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageCustomSize'],
     'exclude' => true,
     'inputType' => 'checkbox',
@@ -65,7 +65,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageCustomSize'] = [
     'sql' => "char(1) NOT NULL default ''",
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSize'] = [
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageSize'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageSize'],
     'exclude' => true,
     'inputType' => 'imageSize',
