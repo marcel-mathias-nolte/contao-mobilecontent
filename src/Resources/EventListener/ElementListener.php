@@ -44,7 +44,6 @@ class ElementListener
      */
     private function getElementVisibility(Model $element)
     {
-        var_dump($GLOBALS['objPage']); die();
         $isMobile = $GLOBALS['objPage']->isMobile;
 
         // Hide on mobile
