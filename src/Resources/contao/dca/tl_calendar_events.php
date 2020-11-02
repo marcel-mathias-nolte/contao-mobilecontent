@@ -35,7 +35,48 @@ if (isset($GLOBALS['TL_DCA']['tl_calendar_events']['subpalettes']['addImage'])) 
 /**
  * Add fields
  */
-$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImage'] = &$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImage'];
-$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageSrc'] = &$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSrc'];
-$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageCustomSize'] = &$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageCustomSize'];
-$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['mobileImageSize'] = &$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSize'];
+$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImage'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImage'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['submitOnChange' => true, 'tl_class' => 'clr'],
+    'sql' => "char(1) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSrc'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageSrc'],
+    'exclude' => true,
+    'inputType' => 'fileTree',
+    'eval' => [
+        'filesOnly' => true,
+        'fieldType' => 'radio',
+        'mandatory' => true,
+        'extensions' => Config::get('validImageTypes'),
+        'tl_class' => 'clr',
+    ],
+    'sql' => "binary(16) NULL",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageCustomSize'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageCustomSize'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['submitOnChange' => true, 'tl_class' => 'clr'],
+    'sql' => "char(1) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['mobileImageSize'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['mobileImageSize'],
+    'exclude' => true,
+    'inputType' => 'imageSize',
+    'options' => System::getImageSizes(),
+    'reference' => &$GLOBALS['TL_LANG']['MSC'],
+    'eval' => [
+        'rgxp' => 'natural',
+        'includeBlankOption' => true,
+        'nospace' => true,
+        'helpwizard' => true,
+        'tl_class' => 'clr',
+    ],
+    'sql' => "varchar(64) NOT NULL default ''",
+];
