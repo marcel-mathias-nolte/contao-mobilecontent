@@ -1,5 +1,5 @@
 {
-    "name": "derhaeuptling/contao-mobilecontent",
+    "name": "marcel-mathias-nolte/contao-mobilecontent",
     "description": "MobileContent extension for Contao Open Source CMS",
     "keywords": ["contao", "mobile", "content"],
     "type": "contao-module",
@@ -14,27 +14,35 @@
             "email":"kamil.kuzminski@codefog.pl",
             "homepage": "https://codefog.pl",
             "role": "developer"
+        },
+        {
+            "name": "Marcel Mathias Nolte",
+            "homepage": "https://github.com/marcel-mathias-nolte"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "contao/core-bundle":"~3.5 || ~4.1",
+        "php": ">=7.2",
+        "contao/core-bundle":"^4.4",
         "contao-community-alliance/composer-plugin":"~2.4 || ~3.0",
-        "codefog/contao-haste":"^4.17"
+        "codefog/contao-haste":"^4.17",
+        "bugbuster/contao-mobiledetection-bundle": "*"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "derhaeuptling/contao-mobilecontent": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
     },
     "autoload": {
-        "psr-0": {
-            "Derhaeuptling\\MobileContent\\": "src/"
+        "psr-4": {
+            "MarcelMathiasNolte\\ContaoMobilecontentBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcelMathiasNolte\\ContaoMobilecontentBundle\\Tests\\": "tests/"
         }
     },
     "extra": {
-        "contao": {
-            "sources": {
-                "": "system/modules/mobilecontent"
-            },
-            "runonce": [
-                "system/modules/mobilecontent/config/upgrade.php"
-            ]
-        }
+        "contao-manager-plugin": "MarcelMathiasNolte\\ContaoMobilecontentBundle\\ContaoManager\\Plugin"
     }
 }

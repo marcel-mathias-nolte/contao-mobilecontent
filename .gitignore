@@ -21,9 +21,16 @@ build.log
 *.sublime-project
 *.sublime-workspace
 
+# PhpUnit
+/phpunit.xml
+
 
 # ignore generated .class files
 *.class
+
+# ignore composer imports
+/composer.lock
+/vendor/
 
 # except this file
 !.gitignore
