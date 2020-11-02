@@ -24,5 +24,5 @@ if (!is_array($GLOBALS['TL_HOOKS']['parseTemplate'])) {
 
 array_unshift($GLOBALS['TL_HOOKS']['parseTemplate'], ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\TemplateListener', 'onParse']);
 
-$GLOBALS['TL_HOOKS']['generatePage'][]      = array('BugBuster\MobileDetection\Hooks', 'insertInsertTagMD');
-$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('BugBuster\MobileDetection\Hooks', 'mobiledetectionReplaceInsertTags');
+$GLOBALS['TL_HOOKS']['generatePage'][]      = array('MarcelMathiasNolte\ContaoMobilecontentBundle\Hooks', 'insertInsertTagMD');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('MarcelMathiasNolte\ContaoMobilecontentBundle\Hooks', 'mobiledetectionReplaceInsertTags');

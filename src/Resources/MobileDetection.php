@@ -40,7 +40,7 @@ class MobileDetection extends \Contao\System
      */
     public static function getInstance() {
         if (!self::$objInstance){
-            self::$objInstance = new MobileDetect();
+            self::$objInstance = new MobileDetection();
         }
         return self::$objInstance;
     }
