@@ -46,7 +46,6 @@
     "conflict": {
         "contao/core": "*",
         "derhaeuptling/contao-mobilecontent": "*",
-        "bugbuster/contao-mobiledetection-bundle": "*",
         "contao/manager-plugin": "<2.0 || >=3.0"
     },
     "autoload": {
