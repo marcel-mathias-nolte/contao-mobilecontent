@@ -64,5 +64,11 @@
     "support": {
         "issues": "https://github.com/marcel-mathias-nolte/contao-mobile-detection-content/issues",
         "source": "https://github.com/marcel-mathias-nolte/contao-mobile-detection-content"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao-community-alliance/composer-plugin": true
+        }
     }
 }

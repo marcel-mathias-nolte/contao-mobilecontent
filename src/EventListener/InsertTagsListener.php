@@ -65,10 +65,10 @@ class InsertTagsListener
      */
     private function parseConditionalTags(array $chunks, $isMobile, array $tags, &$_rit, &$_cnt)
     {
+        $step = version_compare(VERSION, '4.4', '>=') ? 2 : 3;
         if ((in_array($chunks[0], ['ifmobile', 'ifndesktop'], true) && !$isMobile)
             || (in_array($chunks[0], ['ifnmobile', 'ifdesktop'], true) && $isMobile)
         ) {
-            $step = version_compare(VERSION, '4.4', '>=') ? 2 : 3;
 
             for (; $_rit < $_cnt; $_rit += $step) {
                 if ($tags[$_rit + 1] === 'end' . $chunks[0]) {

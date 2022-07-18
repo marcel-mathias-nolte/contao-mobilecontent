@@ -18,7 +18,7 @@
 $GLOBALS['TL_HOOKS']['isVisibleElement'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\ElementListener', 'onIsVisibleElement'];
 $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = ['MarcelMathiasNolte\ContaoMobilecontentBundle\EventListener\InsertTagsListener', 'onReplace'];
 
-if (!is_array($GLOBALS['TL_HOOKS']['parseTemplate'])) {
+if (!isset($GLOBALS['TL_HOOKS']['parseTemplate']) || !is_array($GLOBALS['TL_HOOKS']['parseTemplate'])) {
     $GLOBALS['TL_HOOKS']['parseTemplate'] = [];
 }
 
